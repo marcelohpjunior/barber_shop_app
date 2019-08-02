@@ -23,7 +23,13 @@ class _ConfirmarAgendamentoState extends State<ConfirmarAgendamento> {
           ),
         ),
       ),
-      body: Column(),
+      body: Column(
+        children: <Widget>[
+          Center(
+            child: Text("Confirmar agendamento"),
+          ),
+        ],
+      ),
     );
   }
 }
