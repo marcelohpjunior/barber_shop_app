@@ -1,3 +1,4 @@
+import 'package:barber_shop_app/widgets/bs_drawer.dart';
 import 'package:flutter/material.dart';
 
 class ConfirmarAgendamento extends StatefulWidget {
@@ -16,14 +17,9 @@ class _ConfirmarAgendamentoState extends State<ConfirmarAgendamento> {
         ),
         centerTitle: true,
       ),
-      drawer: SafeArea(
-        child: Drawer(
-          child: Center(
-            child: Text("teste"),
-          ),
-        ),
-      ),
+      drawer: BsDrawer(),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Center(
             child: Text("Confirmar agendamento"),

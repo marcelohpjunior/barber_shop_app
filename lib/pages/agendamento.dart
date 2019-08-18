@@ -1,3 +1,4 @@
+import 'package:barber_shop_app/widgets/bs_drawer.dart';
 import 'package:flutter/material.dart';
 
 import 'confirmar-agenda.dart';
@@ -18,13 +19,7 @@ class _AgendamentoPageState extends State<AgendamentoPage> {
         ),
         centerTitle: true,
       ),
-      drawer: SafeArea(
-        child: Drawer(
-          child: Center(
-            child: Text("teste"),
-          ),
-        ),
-      ),
+      drawer: BsDrawer(),
       body: Center(
         child: RaisedButton(
           child: Text("Tela confirmar agendamento"),
