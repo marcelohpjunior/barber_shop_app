@@ -1,5 +1,5 @@
 import 'package:barber_shop_app/main.dart';
-import 'package:barber_shop_app/widgets/bs_drawer.dart';
+import 'package:barber_shop_app/widgets/barber_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
@@ -17,9 +17,9 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: SafeArea(
-        child: BsDrawer(),
-      ),
+//      drawer: SafeArea(
+//        child: BarberDrawer(),
+//      ),
       body: Column(
         children: <Widget>[
           Expanded(

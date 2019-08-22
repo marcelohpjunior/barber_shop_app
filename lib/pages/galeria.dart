@@ -1,11 +1,12 @@
+import 'package:barber_shop_app/widgets/barber_drawer.dart';
 import 'package:flutter/material.dart';
 
-class Agendamento extends StatefulWidget {
+class Galeria extends StatefulWidget {
   @override
-  _AgendamentoState createState() => _AgendamentoState();
+  _GaleriaState createState() => _GaleriaState();
 }
 
-class _AgendamentoState extends State<Agendamento> {
+class _GaleriaState extends State<Galeria> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,12 +17,12 @@ class _AgendamentoState extends State<Agendamento> {
 //        ),
 //        centerTitle: true,
 //      ),
-//      //drawer: BarberDrawer(),
+//     drawer: BarberDrawer(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Center(
-            child: Text("Agendamento"),
+            child: Text("Galeria"),
           ),
         ],
       ),

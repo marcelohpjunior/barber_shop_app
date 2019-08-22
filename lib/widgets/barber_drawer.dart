@@ -1,35 +1,12 @@
 import 'package:flutter/material.dart';
 
-class BsDrawer extends StatelessWidget {
-  _drawerTile(String text) {
-    return Material(
-      child: InkWell(
-        child: Container(
-          margin: EdgeInsets.only(bottom: 20, right: 100),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(right: 20),
-                child: SizedBox(
-                  height: 12,
-                  width: 8,
-                  child: Container(
-                    color: Colors.amber,
-                  ),
-                ),
-              ),
-              Text(
-                text,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+import 'barber_drawer_tile.dart';
 
+class BarberDrawer extends StatelessWidget {
+  PageController pageController;
+  BarberDrawer(PageController pageController) {
+    this.pageController = pageController;
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -75,10 +52,10 @@ class BsDrawer extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            _drawerTile("AGENDAMENTO"),
-            _drawerTile("FIDELIDADE"),
-            _drawerTile("GALERIA"),
-            _drawerTile("SOBRE NÓS"),
+            BarberDrawerTile("AGENDAMENTO", pageController, 0),
+            BarberDrawerTile("FIDELIDADE", pageController, 1),
+            BarberDrawerTile("GALERIA", pageController, 2),
+            BarberDrawerTile("SOBRE NÓS", pageController, 3),
           ],
         ),
       ),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Agendamento extends StatefulWidget {
+class Fidelidade extends StatefulWidget {
   @override
-  _AgendamentoState createState() => _AgendamentoState();
+  _FidelidadeState createState() => _FidelidadeState();
 }
 
-class _AgendamentoState extends State<Agendamento> {
+class _FidelidadeState extends State<Fidelidade> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _AgendamentoState extends State<Agendamento> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Center(
-            child: Text("Agendamento"),
+            child: Text("Fidelidade"),
           ),
         ],
       ),
