@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 
-class Sobre extends StatefulWidget {
-  @override
-  _SobreState createState() => _SobreState();
-}
+class Sobre extends StatelessWidget {
+  PageController pageController;
+  Sobre(this.pageController);
 
-class _SobreState extends State<Sobre> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return WillPopScope(
+        onWillPop: () async {
+          pageController.jumpToPage(0);
+          return false;
+        },
+        child: Scaffold(
 //      appBar: AppBar(
 //        title: Image.asset(
 //          'images/logo.png',
@@ -17,14 +20,14 @@ class _SobreState extends State<Sobre> {
 //        centerTitle: true,
 //      ),
 //      //drawer: BarberDrawer(),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Center(
-            child: Text("Sobre"),
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Center(
+                child: Text("Sobre"),
+              ),
+            ],
           ),
-        ],
-      ),
-    );
+        ));
   }
 }

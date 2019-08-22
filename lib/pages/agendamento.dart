@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-class Agendamento extends StatefulWidget {
-  @override
-  _AgendamentoState createState() => _AgendamentoState();
-}
+class Agendamento extends StatelessWidget {
+  PageController pageController;
+  Agendamento(this.pageController);
 
-class _AgendamentoState extends State<Agendamento> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,6 +21,11 @@ class _AgendamentoState extends State<Agendamento> {
           Center(
             child: Text("Agendamento"),
           ),
+          RaisedButton(
+              child: Text("Confirmar agendamento"),
+              onPressed: () {
+                pageController.jumpToPage(4);
+              }),
         ],
       ),
     );

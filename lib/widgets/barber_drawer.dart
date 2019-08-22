@@ -52,7 +52,8 @@ class BarberDrawer extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            BarberDrawerTile("AGENDAMENTO", pageController, 0),
+            BarberDrawerTile("AGENDAMENTO", pageController,
+                pageController.page.round() == 4 ? 4 : 0),
             BarberDrawerTile("FIDELIDADE", pageController, 1),
             BarberDrawerTile("GALERIA", pageController, 2),
             BarberDrawerTile("SOBRE NÓS", pageController, 3),

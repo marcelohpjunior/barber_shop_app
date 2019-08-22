@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 
-class Fidelidade extends StatefulWidget {
-  @override
-  _FidelidadeState createState() => _FidelidadeState();
-}
+class Fidelidade extends StatelessWidget {
+  PageController pageController;
+  Fidelidade(this.pageController);
 
-class _FidelidadeState extends State<Fidelidade> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return WillPopScope(
+        onWillPop: () async {
+          pageController.jumpToPage(0);
+          return false;
+        },
+        child: Scaffold(
 //      appBar: AppBar(
 //        title: Image.asset(
 //          'images/logo.png',
@@ -17,14 +20,14 @@ class _FidelidadeState extends State<Fidelidade> {
 //        centerTitle: true,
 //      ),
 //      //drawer: BarberDrawer(),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Center(
-            child: Text("Fidelidade"),
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Center(
+                child: Text("Fidelidade"),
+              ),
+            ],
           ),
-        ],
-      ),
-    );
+        ));
   }
 }
