@@ -1,4 +1,3 @@
-import 'package:barber_shop_app/widgets/barber_drawer.dart';
 import 'package:flutter/material.dart';
 
 class ConfirmarAgendamento extends StatelessWidget {
@@ -12,7 +11,7 @@ class ConfirmarAgendamento extends StatelessWidget {
       ),
       alignment: Alignment.center,
       child: RaisedButton(
-          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 25),
+          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(8)),
           ),
