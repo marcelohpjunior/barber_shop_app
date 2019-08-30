@@ -1,5 +1,6 @@
-import 'package:barber_shop_app/main.dart';
-import 'package:barber_shop_app/widgets/barber_drawer.dart';
+import 'dart:io';
+
+import 'package:barber_shop_app/widgets/barber_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
@@ -91,9 +92,42 @@ class _LoginState extends State<Login> {
                       padding: EdgeInsets.only(top: 15, bottom: 20),
                       child: _btnEsqueceuSenha(),
                     ),
-                    _btnLogin(context),
-                    _btnLoginGoogle(context),
-                    _btnLoginFacebook(context),
+                    BarberButton(
+                      text: "Entrar",
+                      textColor: Colors.white,
+                      color: Colors.grey,
+                      icon: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.white,
+                      ),
+                      divider: true,
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Home()));
+                      },
+                    ),
+                    BarberButton(
+                      text: "Login com Google",
+                      textColor: Colors.white,
+                      color: Color.fromRGBO(205, 76, 62, 1),
+                      icon: Icon(
+                        MaterialCommunityIcons.getIconData("google-glass"),
+                        color: Colors.white,
+                      ),
+                      divider: true,
+                      onPressed: () {},
+                    ),
+                    BarberButton(
+                      text: "Login com Facebook",
+                      textColor: Colors.white,
+                      color: Color.fromRGBO(65, 97, 157, 1),
+                      icon: Icon(
+                        MaterialCommunityIcons.getIconData("facebook"),
+                        color: Colors.white,
+                      ),
+                      divider: true,
+                      onPressed: () {},
+                    ),
                   ],
                 ),
               ),
@@ -115,95 +149,31 @@ class _LoginState extends State<Login> {
     );
   }
 
-  _btnLogin(BuildContext context) {
-    return RaisedButton(
-      onPressed: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Home()));
-      },
-      child: Text("Entrar"),
-    );
-  }
-
-  _btnLoginGoogle(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(
-        top: 20,
-      ),
-      padding: EdgeInsets.symmetric(horizontal: 60),
-      alignment: Alignment.center,
-      child: RaisedButton(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(8)),
-        ),
-        color: Color.fromRGBO(205, 76, 62, 1),
-        onPressed: () {},
-        child: Row(
-          children: <Widget>[
-            Icon(
-              MaterialCommunityIcons.getIconData("google-glass"),
-              color: Colors.white,
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
-              color: Theme.of(context).backgroundColor,
-              height: 45,
-              width: 2,
-            ),
-            Text(
-              "Login com Google",
-              style: TextStyle(color: Colors.white, fontSize: 16),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-
-  _btnLoginFacebook(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: 10, bottom: 30),
-      padding: EdgeInsets.symmetric(horizontal: 60),
-      alignment: Alignment.center,
-      child: RaisedButton(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(8)),
-        ),
-        color: Color.fromRGBO(65, 97, 157, 1),
-        onPressed: () {},
-        child: Row(
-          children: <Widget>[
-            Icon(
-              MaterialCommunityIcons.getIconData("facebook"),
-              color: Colors.white,
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
-              color: Theme.of(context).backgroundColor,
-              height: 45,
-              width: 2,
-            ),
-            Text(
-              "Login com Facebook",
-              style: TextStyle(color: Colors.white, fontSize: 16),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-
   _btnNPossuiCadastro() {
-    return SizedBox(
-      height: 40,
-      width: double.maxFinite,
-      child: FlatButton(
-        color: Colors.grey,
-        child: Text(
-          "Não possui cadastro? Clique aqui",
-        ),
-        onPressed: () {},
-      ),
-    );
+    return Platform.isIOS
+        ? SafeArea(
+            child: SizedBox(
+              height: 40,
+              width: double.maxFinite,
+              child: FlatButton(
+                color: Colors.grey,
+                child: Text(
+                  "Não possui cadastro? Clique aqui",
+                ),
+                onPressed: () {},
+              ),
+            ),
+          )
+        : SizedBox(
+            height: 40,
+            width: double.maxFinite,
+            child: FlatButton(
+              color: Colors.grey,
+              child: Text(
+                "Não possui cadastro? Clique aqui",
+              ),
+              onPressed: () {},
+            ),
+          );
   }
 }

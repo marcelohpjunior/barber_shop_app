@@ -6,16 +6,8 @@ class Agendamento extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-//      appBar: AppBar(
-//        title: Image.asset(
-//          'images/logo.png',
-//          scale: 30,
-//        ),
-//        centerTitle: true,
-//      ),
-//      //drawer: BarberDrawer(),
-      body: Column(
+    return Container(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Center(
