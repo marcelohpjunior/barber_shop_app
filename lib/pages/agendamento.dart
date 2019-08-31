@@ -21,6 +21,7 @@ class Agendamento extends StatelessWidget {
         ],
       ),
       child: GroovinExpansionTile(
+        defaultTrailingIconColor: Color.fromRGBO(194, 155, 79, 1),
         initiallyExpanded: true,
         title: Padding(
           padding: EdgeInsets.only(left: 40),
@@ -51,7 +52,6 @@ class Agendamento extends StatelessWidget {
             ),
           ),
           Divider(),
-          Divider(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
@@ -71,7 +71,6 @@ class Agendamento extends StatelessWidget {
             ),
           ),
           Divider(),
-          Divider(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
@@ -90,7 +89,6 @@ class Agendamento extends StatelessWidget {
               ],
             ),
           ),
-          Divider(),
           Divider(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -121,22 +119,24 @@ class Agendamento extends StatelessWidget {
     return Column(
       children: <Widget>[
         Expanded(
-          child: Container(
-            child: Column(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(top: 30, bottom: 20),
-                  child: Text(
-                    "AGENDE O SEU HORÁRIO",
-                    style: TextStyle(
-                      color: Color.fromRGBO(194, 155, 79, 1),
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
+          child: SingleChildScrollView(
+            child: Container(
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30, bottom: 20),
+                    child: Text(
+                      "AGENDE O SEU HORÁRIO",
+                      style: TextStyle(
+                        color: Color.fromRGBO(194, 155, 79, 1),
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
-                ),
-                _expansionTile(),
-              ],
+                  _expansionTile(),
+                ],
+              ),
             ),
           ),
         ),
