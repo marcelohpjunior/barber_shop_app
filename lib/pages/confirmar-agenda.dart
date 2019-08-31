@@ -1,3 +1,4 @@
+import 'package:barber_shop_app/widgets/barber_button.dart';
 import 'package:flutter/material.dart';
 
 class ConfirmarAgendamento extends StatelessWidget {
@@ -5,22 +6,24 @@ class ConfirmarAgendamento extends StatelessWidget {
   ConfirmarAgendamento(this.pageController);
 
   _btnConfirmAgenda(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(
-        bottom: 30,
+    return SizedBox(
+      width: double.maxFinite,
+      child: Container(
+        margin: EdgeInsets.only(bottom: 10, left: 40, right: 40),
+        child: RaisedButton(
+            padding: EdgeInsets.symmetric(
+              vertical: 10,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+            ),
+            color: Color.fromRGBO(194, 155, 79, 1),
+            onPressed: () {},
+            child: Text(
+              "oláaaaaaa",
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            )),
       ),
-      alignment: Alignment.center,
-      child: RaisedButton(
-          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(8)),
-          ),
-          color: Color.fromRGBO(194, 155, 79, 1),
-          onPressed: () {},
-          child: Text(
-            "CONFIRMAR AGENDAMENTO",
-            style: TextStyle(color: Colors.white, fontSize: 16),
-          )),
     );
   }
 
@@ -91,7 +94,15 @@ class ConfirmarAgendamento extends StatelessWidget {
               ),
             ),
           ),
-          _btnConfirmAgenda(context)
+          BarberButton(
+            onPressed: () {},
+            margin: EdgeInsets.only(bottom: 30, left: 40, right: 40),
+            text: Text(
+              "CONFIRMAR AGENDAMENTO",
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            ),
+            color: Color.fromRGBO(194, 155, 79, 1),
+          )
         ],
       ),
     );

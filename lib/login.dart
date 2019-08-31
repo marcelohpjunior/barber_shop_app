@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:barber_shop_app/widgets/barber_button.dart';
+import 'package:barber_shop_app/widgets/barber_button_login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
@@ -92,9 +92,11 @@ class _LoginState extends State<Login> {
                       padding: EdgeInsets.only(top: 15, bottom: 20),
                       child: _btnEsqueceuSenha(),
                     ),
-                    BarberButton(
-                      text: "Entrar",
-                      textColor: Colors.white,
+                    BarberButtonLogin(
+                      text: Text(
+                        "Entrar",
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
                       color: Colors.grey,
                       icon: Icon(
                         Icons.arrow_forward_ios,
@@ -106,9 +108,11 @@ class _LoginState extends State<Login> {
                             MaterialPageRoute(builder: (context) => Home()));
                       },
                     ),
-                    BarberButton(
-                      text: "Login com Google",
-                      textColor: Colors.white,
+                    BarberButtonLogin(
+                      text: Text(
+                        "Login com Google",
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
                       color: Color.fromRGBO(205, 76, 62, 1),
                       icon: Icon(
                         MaterialCommunityIcons.getIconData("google-glass"),
@@ -117,9 +121,11 @@ class _LoginState extends State<Login> {
                       divider: true,
                       onPressed: () {},
                     ),
-                    BarberButton(
-                      text: "Login com Facebook",
-                      textColor: Colors.white,
+                    BarberButtonLogin(
+                      text: Text(
+                        "Login com Facebook",
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
                       color: Color.fromRGBO(65, 97, 157, 1),
                       icon: Icon(
                         MaterialCommunityIcons.getIconData("facebook"),
