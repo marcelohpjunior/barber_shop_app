@@ -1,7 +1,3 @@
-import 'package:barber_shop_app/pages/agendamento.dart';
-import 'package:barber_shop_app/pages/fidelidade.dart';
-import 'package:barber_shop_app/pages/galeria.dart';
-import 'package:barber_shop_app/pages/sobre.dart';
 import 'package:flutter/material.dart';
 
 class BarberDrawerTile extends StatelessWidget {

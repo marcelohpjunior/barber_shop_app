@@ -1,5 +1,5 @@
-import 'package:barber_shop_app/widgets/barber_button.dart';
 import 'package:flutter/material.dart';
+import 'package:barber_shop_app/src/shared/widgets/barber_button.dart';
 
 class ConfirmarAgendamento extends StatelessWidget {
   PageController pageController;

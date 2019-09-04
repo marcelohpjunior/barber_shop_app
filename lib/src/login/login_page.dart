@@ -1,10 +1,9 @@
 import 'dart:io';
 
-import 'package:barber_shop_app/widgets/barber_button_login.dart';
+import 'package:barber_shop_app/src/home/home_module.dart';
+import 'package:barber_shop_app/src/shared/widgets/barber_button_login.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-
-import 'home.dart';
+import 'package:flutter_icons/material_community_icons.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -105,7 +104,7 @@ class _LoginState extends State<Login> {
                       divider: true,
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Home()));
+                            MaterialPageRoute(builder: (context) => HomeModule()));
                       },
                     ),
                     BarberButtonLogin(

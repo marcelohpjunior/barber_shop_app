@@ -1,4 +1,3 @@
-import 'package:barber_shop_app/widgets/barber_drawer.dart';
 import 'package:flutter/material.dart';
 
 class Galeria extends StatelessWidget {
