@@ -50,11 +50,18 @@ class _BarberExpansionTileState extends State<BarberExpansionTile> {
               last: false,
             ),
           ),
-          BarberExpansionItem(
-            map: map,
-            index: 1,
-            last: true,
-          )
+          InkWell(
+            onTap: () {
+              setState(() {
+                _titleExpansion = map.keys.toList()[1].toString();
+              });
+            },
+            child: BarberExpansionItem(
+              map: map,
+              index: 1,
+              last: true,
+            ),
+          ),
         ],
       ),
     );
