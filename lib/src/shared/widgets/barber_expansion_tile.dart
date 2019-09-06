@@ -10,6 +10,7 @@ class BarberExpansionTile extends StatefulWidget {
 
 class _BarberExpansionTileState extends State<BarberExpansionTile> {
   static Map map = {'test': 'teste1', 'olá': 'mundo'};
+  String _titleExpansion = "Escolha o serviço";
 
   @override
   Widget build(BuildContext context) {
@@ -31,16 +32,23 @@ class _BarberExpansionTileState extends State<BarberExpansionTile> {
         title: Padding(
           padding: EdgeInsets.only(left: 40),
           child: Text(
-            "Testando",
+            _titleExpansion,
             style: TextStyle(fontSize: 18),
             textAlign: TextAlign.center,
           ),
         ),
         children: <Widget>[
-          BarberExpansionItem(
-            map: map,
-            index: 0,
-            last: false,
+          InkWell(
+            onTap: () {
+              setState(() {
+                _titleExpansion = map.keys.toList()[0].toString();
+              });
+            },
+            child: BarberExpansionItem(
+              map: map,
+              index: 0,
+              last: false,
+            ),
           ),
           BarberExpansionItem(
             map: map,
