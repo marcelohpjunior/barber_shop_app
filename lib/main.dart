@@ -1,10 +1,6 @@
+import 'package:barber_shop_app/src/login/login_page.dart';
 import 'package:flutter/material.dart';
-import 'package:barber_shop_app/src/app_module.dart';
 
-<<<<<<< Updated upstream
-void main() => runApp(AppModule());
-=======
-<<<<<<< Updated upstream
 void main() => runApp(BarberShopApp());
 
 class BarberShopApp extends StatelessWidget {
@@ -21,8 +17,3 @@ class BarberShopApp extends StatelessWidget {
     );
   }
 }
-=======
-void main() => runApp(AppModule());
-
->>>>>>> Stashed changes
->>>>>>> Stashed changes

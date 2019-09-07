@@ -6,23 +6,10 @@ class ConfirmarAgendamento extends StatelessWidget {
   ConfirmarAgendamento(this.pageController);
 
   _btnConfirmAgenda(BuildContext context) {
-<<<<<<< Updated upstream:lib/src/agendamento/pages/confirmar_agendamento/confirmar_agenda_page.dart
     return SizedBox(
       width: double.maxFinite,
       child: Container(
         margin: EdgeInsets.only(bottom: 10, left: 40, right: 40),
-=======
-<<<<<<< Updated upstream:lib/pages/confirmar-agenda.dart
-    return Container(
-      margin: EdgeInsets.only(
-        bottom: 30,
-=======
-    return SizedBox(
-      width: double.maxFinite,
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 70),
-        //margin: EdgeInsets.only(bottom: 10, left: 40, right: 40),
->>>>>>> Stashed changes:lib/pages/confirmar-agenda.dart
         child: RaisedButton(
             padding: EdgeInsets.symmetric(
               vertical: 10,
@@ -36,10 +23,6 @@ class ConfirmarAgendamento extends StatelessWidget {
               "oláaaaaaa",
               style: TextStyle(color: Colors.white, fontSize: 16),
             )),
-<<<<<<< Updated upstream:lib/src/agendamento/pages/confirmar_agendamento/confirmar_agenda_page.dart
-=======
->>>>>>> Stashed changes:lib/src/agendamento/pages/confirmar_agendamento/confirmar_agenda_page.dart
->>>>>>> Stashed changes:lib/pages/confirmar-agenda.dart
       ),
     );
   }

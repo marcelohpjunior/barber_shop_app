@@ -33,11 +33,7 @@ class _BarberExpansionTileState extends State<BarberExpansionTile> {
           padding: EdgeInsets.only(left: 40),
           child: Text(
             _titleExpansion,
-<<<<<<< Updated upstream
-            style: TextStyle(fontSize: 18),
-=======
-            style: TextStyle(fontSize: 18,color: Colors.black),
->>>>>>> Stashed changes
+            style: TextStyle(fontSize: 18, color: Colors.black),
             textAlign: TextAlign.center,
           ),
         ),
