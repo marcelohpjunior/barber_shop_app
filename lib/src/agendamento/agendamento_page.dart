@@ -2,9 +2,7 @@ import 'package:barber_shop_app/src/shared/widgets/barber_button.dart';
 import 'package:barber_shop_app/src/shared/widgets/barber_calendar.dart';
 import 'package:barber_shop_app/src/shared/widgets/barber_expansion_item.dart';
 import 'package:barber_shop_app/src/shared/widgets/barber_expansion_tile.dart';
-import 'package:calendar_widget/calendar_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart';
 import 'package:groovin_widgets/groovin_expansion_tile.dart';
 import 'package:table_calendar/table_calendar.dart';
 
