@@ -47,10 +47,9 @@ class BarberCalendar extends StatelessWidget {
             formatButtonVisible: false,
             centerHeaderTitle: true,
             titleTextStyle: TextStyle(
-              color: Color.fromRGBO(194, 155, 79, 1),
-              fontSize: 18,
-              fontWeight: FontWeight.bold
-            ),
+                color: Color.fromRGBO(194, 155, 79, 1),
+                fontSize: 18,
+                fontWeight: FontWeight.bold),
             leftChevronIcon: Icon(
               Icons.chevron_left,
               color: Color.fromRGBO(194, 155, 79, 1),
@@ -60,7 +59,10 @@ class BarberCalendar extends StatelessWidget {
               color: Color.fromRGBO(194, 155, 79, 1),
             ),
             titleTextBuilder: (DateTime date, dynamic d) {
-              return DateFormat('dd MMM yyyy', 'pt_BR').format(date).toString().toUpperCase();
+              return DateFormat('dd MMM yyyy', 'pt_BR')
+                  .format(date)
+                  .toString()
+                  .toUpperCase();
             }),
       ),
     );
