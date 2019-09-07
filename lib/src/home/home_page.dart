@@ -7,6 +7,11 @@ import 'package:barber_shop_app/src/galeria/galeria_page.dart';
 import 'package:barber_shop_app/src/shared/widgets/barber_drawer.dart';
 import 'package:barber_shop_app/src/sobre/sobre_module.dart';
 import 'package:flutter/material.dart';
+<<<<<<< Updated upstream
+=======
+import 'package:table_calendar/table_calendar.dart';
+import 'package:intl/date_symbol_data_local.dart';
+>>>>>>> Stashed changes
 
 class HomePage extends StatefulWidget {
   @override
@@ -15,6 +20,16 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   PageController _pagecontroller = PageController();
+<<<<<<< Updated upstream
+=======
+  CalendarController _calendarController;
+  @override
+  void initState() {
+    super.initState();
+    _calendarController = CalendarController();
+    initializeDateFormatting();
+  }
+>>>>>>> Stashed changes
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +48,11 @@ class _HomePageState extends State<HomePage> {
             physics: NeverScrollableScrollPhysics(),
             controller: _pagecontroller,
             children: <Widget>[
+<<<<<<< Updated upstream
               AgendamentoModule(_pagecontroller),
+=======
+              AgendamentoModule(_pagecontroller, _calendarController),
+>>>>>>> Stashed changes
               FidelidadeModule(_pagecontroller),
               GaleriaModule(_pagecontroller),
               SobreModule(_pagecontroller),

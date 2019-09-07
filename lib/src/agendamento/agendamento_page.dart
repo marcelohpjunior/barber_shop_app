@@ -1,4 +1,5 @@
 import 'package:barber_shop_app/src/shared/widgets/barber_button.dart';
+<<<<<<< Updated upstream
 import 'package:barber_shop_app/src/shared/widgets/barber_expansion_item.dart';
 import 'package:barber_shop_app/src/shared/widgets/barber_expansion_tile.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,21 @@ import 'package:groovin_widgets/groovin_expansion_tile.dart';
 class Agendamento extends StatelessWidget {
   PageController pageController;
   Agendamento(this.pageController);
+=======
+import 'package:barber_shop_app/src/shared/widgets/barber_calendar.dart';
+import 'package:barber_shop_app/src/shared/widgets/barber_expansion_item.dart';
+import 'package:barber_shop_app/src/shared/widgets/barber_expansion_tile.dart';
+import 'package:calendar_widget/calendar_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart';
+import 'package:groovin_widgets/groovin_expansion_tile.dart';
+import 'package:table_calendar/table_calendar.dart';
+
+class Agendamento extends StatelessWidget {
+  PageController pageController;
+  CalendarController _calendarController;
+  Agendamento(this.pageController, this._calendarController);
+>>>>>>> Stashed changes
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +46,10 @@ class Agendamento extends StatelessWidget {
                   ),
                   BarberExpansionTile(),
                   BarberExpansionTile(),
+<<<<<<< Updated upstream
+=======
+                  BarberCalendar(_calendarController),
+>>>>>>> Stashed changes
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20),
                     child: BarberExpansionTile(),
