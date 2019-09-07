@@ -38,7 +38,7 @@ class BarberCalendar extends StatelessWidget {
         calendarStyle: CalendarStyle(
             outsideWeekendStyle: TextStyle(color: Colors.black26),
             outsideStyle: TextStyle(color: Colors.black26),
-            holidayStyle: TextStyle(color: Colors.red),
+            holidayStyle: TextStyle(color: Colors.red[800]),
             weekendStyle: TextStyle(color: Colors.black),
             markersColor: Color.fromRGBO(194, 155, 79, 1),
             todayColor: Colors.grey,
