@@ -1,3 +1,4 @@
+import 'package:barber_shop_app/src/shared/widgets/barber_colors.dart';
 import 'package:flutter/material.dart';
 
 class BarberDrawerTile extends StatelessWidget {
@@ -40,18 +41,22 @@ class BarberDrawerTile extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 20),
                 child: SizedBox(
-                  height: 12,
+                  height: 15,
                   width: 8,
                   child: Container(
                     color: pageController.page.round() == page
-                        ? Colors.amber
+                        ? BarberColors.blackOnyx
                         : Colors.transparent,
                   ),
                 ),
               ),
               Text(
                 text,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: BarberColors.golden,
+                ),
               ),
             ],
           ),

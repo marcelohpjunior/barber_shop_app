@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:groovin_widgets/groovin_expansion_tile.dart';
 
+import 'barber_colors.dart';
 import 'barber_expansion_item.dart';
 
 class BarberExpansionTile extends StatefulWidget {
@@ -27,7 +28,7 @@ class _BarberExpansionTileState extends State<BarberExpansionTile> {
         ],
       ),
       child: GroovinExpansionTile(
-        defaultTrailingIconColor: Color.fromRGBO(194, 155, 79, 1),
+        defaultTrailingIconColor: BarberColors.golden,
         initiallyExpanded: true,
         title: Padding(
           padding: EdgeInsets.only(left: 40),

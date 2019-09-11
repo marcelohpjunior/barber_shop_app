@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
 
+import 'barber_colors.dart';
+
 class BarberCalendar extends StatelessWidget {
   //const BarberCalendar({Key key}) : super(key: key);
   CalendarController _calendarController;
@@ -29,7 +31,7 @@ class BarberCalendar extends StatelessWidget {
         availableGestures: AvailableGestures.horizontalSwipe,
         daysOfWeekStyle: DaysOfWeekStyle(
           weekdayStyle: TextStyle(color: Colors.black),
-          weekendStyle: TextStyle(color: Colors.grey),
+          weekendStyle: TextStyle(color: BarberColors.silver),
         ),
         calendarController: _calendarController,
         onDaySelected: (date, t) async {
@@ -40,23 +42,23 @@ class BarberCalendar extends StatelessWidget {
             outsideStyle: TextStyle(color: Colors.black26),
             holidayStyle: TextStyle(color: Colors.red[800]),
             weekendStyle: TextStyle(color: Colors.black),
-            markersColor: Color.fromRGBO(194, 155, 79, 1),
-            todayColor: Colors.grey,
-            selectedColor: Color.fromRGBO(194, 155, 79, 1)),
+            markersColor: BarberColors.golden,
+            todayColor: BarberColors.silver,
+            selectedColor: BarberColors.golden),
         headerStyle: HeaderStyle(
             formatButtonVisible: false,
             centerHeaderTitle: true,
             titleTextStyle: TextStyle(
-                color: Color.fromRGBO(194, 155, 79, 1),
+                color: BarberColors.golden,
                 fontSize: 18,
                 fontWeight: FontWeight.bold),
             leftChevronIcon: Icon(
               Icons.chevron_left,
-              color: Color.fromRGBO(194, 155, 79, 1),
+              color: BarberColors.golden,
             ),
             rightChevronIcon: Icon(
               Icons.chevron_right,
-              color: Color.fromRGBO(194, 155, 79, 1),
+              color: BarberColors.golden,
             ),
             titleTextBuilder: (DateTime date, dynamic d) {
               return DateFormat('dd MMM yyyy', 'pt_BR')

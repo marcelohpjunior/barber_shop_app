@@ -1,4 +1,5 @@
 import 'package:barber_shop_app/src/login/login_page.dart';
+import 'package:barber_shop_app/src/shared/widgets/barber_colors.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(BarberShopApp());
@@ -10,9 +11,9 @@ class BarberShopApp extends StatelessWidget {
     return MaterialApp(
       title: "BarberShopApp",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
-      ),
+      // theme: ThemeData(
+      //   primarySwatch: BarberColors.silver,
+      // ),
       home: Login(),
     );
   }

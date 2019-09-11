@@ -4,6 +4,7 @@ import 'package:barber_shop_app/src/agendamento/pages/confirmar_agendamento/conf
 import 'package:barber_shop_app/src/fidelidade/fidelidade_module.dart';
 import 'package:barber_shop_app/src/galeria/galeria_module.dart';
 import 'package:barber_shop_app/src/galeria/galeria_page.dart';
+import 'package:barber_shop_app/src/shared/widgets/barber_colors.dart';
 import 'package:barber_shop_app/src/shared/widgets/barber_drawer.dart';
 import 'package:barber_shop_app/src/sobre/sobre_module.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +31,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: BarberColors.silverDark,
         title: Image.asset(
           "images/logo.png",
           scale: 30,

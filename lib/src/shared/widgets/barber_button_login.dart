@@ -1,3 +1,4 @@
+import 'package:barber_shop_app/src/shared/widgets/barber_colors.dart';
 import 'package:flutter/material.dart';
 
 class BarberButtonLogin extends StatelessWidget {
@@ -34,7 +35,7 @@ class BarberButtonLogin extends StatelessWidget {
             divider
                 ? Container(
                     margin: EdgeInsets.symmetric(horizontal: 10),
-                    color: Theme.of(context).backgroundColor,
+                    color: BarberColors.background,
                     height: 45,
                     width: 2,
                   )
@@ -44,6 +45,6 @@ class BarberButtonLogin extends StatelessWidget {
         ),
       ),
     );
-    ;
+    
   }
 }

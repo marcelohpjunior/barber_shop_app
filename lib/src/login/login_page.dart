@@ -2,8 +2,10 @@ import 'dart:io';
 
 import 'package:barber_shop_app/src/home/home_module.dart';
 import 'package:barber_shop_app/src/shared/widgets/barber_button_login.dart';
+import 'package:barber_shop_app/src/shared/widgets/barber_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/material_community_icons.dart';
+import 'package:flutter_icons/font_awesome.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -24,6 +26,7 @@ class _LoginState extends State<Login> {
         children: <Widget>[
           Expanded(
             child: Container(
+              color: BarberColors.background,
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
@@ -96,7 +99,7 @@ class _LoginState extends State<Login> {
                         "Entrar",
                         style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
-                      color: Colors.grey,
+                      color: BarberColors.silverDark,
                       icon: Icon(
                         Icons.arrow_forward_ios,
                         color: Colors.white,
@@ -114,7 +117,7 @@ class _LoginState extends State<Login> {
                       ),
                       color: Color.fromRGBO(205, 76, 62, 1),
                       icon: Icon(
-                        MaterialCommunityIcons.getIconData("google-glass"),
+                        FontAwesomeIcons.google,
                         color: Colors.white,
                       ),
                       divider: true,
@@ -127,7 +130,7 @@ class _LoginState extends State<Login> {
                       ),
                       color: Color.fromRGBO(65, 97, 157, 1),
                       icon: Icon(
-                        MaterialCommunityIcons.getIconData("facebook"),
+                        FontAwesomeIcons.facebookF,
                         color: Colors.white,
                       ),
                       divider: true,
@@ -162,7 +165,7 @@ class _LoginState extends State<Login> {
               height: 40,
               width: double.maxFinite,
               child: FlatButton(
-                color: Colors.grey,
+                color: BarberColors.silverDark,
                 child: Text(
                   "Não possui cadastro? Clique aqui",
                 ),
@@ -174,7 +177,7 @@ class _LoginState extends State<Login> {
             height: 40,
             width: double.maxFinite,
             child: FlatButton(
-              color: Colors.grey,
+              color: BarberColors.silverDark,
               child: Text(
                 "Não possui cadastro? Clique aqui",
               ),

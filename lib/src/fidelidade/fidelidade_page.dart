@@ -1,3 +1,4 @@
+import 'package:barber_shop_app/src/shared/widgets/barber_colors.dart';
 import 'package:flutter/material.dart';
 
 class Fidelidade extends StatelessWidget {
@@ -11,23 +12,17 @@ class Fidelidade extends StatelessWidget {
           pageController.jumpToPage(0);
           return false;
         },
-        child: Scaffold(
-//      appBar: AppBar(
-//        title: Image.asset(
-//          'images/logo.png',
-//          scale: 30,
-//        ),
-//        centerTitle: true,
-//      ),
-//      //drawer: BarberDrawer(),
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Center(
-                child: Text("Fidelidade"),
-              ),
-            ],
-          ),
-        ));
+        child: Container(
+          color: BarberColors.background,
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Center(
+                  child: Text("Fidelidade"),
+                ),
+              ],
+            ),
+        ),
+        );
   }
 }
