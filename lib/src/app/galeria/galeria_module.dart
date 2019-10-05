@@ -1,5 +1,5 @@
-import 'package:barber_shop_app/src/galeria/galeria_bloc.dart';
-import 'package:barber_shop_app/src/galeria/galeria_page.dart';
+import 'package:barber_shop_app/src/app/galeria/galeria_bloc.dart';
+import 'package:barber_shop_app/src/app/galeria/galeria_page.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 

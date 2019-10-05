@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:barber_shop_app/src/app_widget.dart';
 import 'package:barber_shop_app/src/app_bloc.dart';
 
-import 'agendamento/agendamento_bloc.dart';
-import 'agendamento/pages/confirmar_agendamento/confirmar_agenda_bloc.dart';
+import 'app/agendamento/agendamento_bloc.dart';
+import 'app/agendamento/pages/confirmar_agendamento/confirmar_agenda_bloc.dart';
 
 class AppModule extends ModuleWidget {
   @override

@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:barber_shop_app/src/home/home_module.dart';
+import 'package:barber_shop_app/src/app/home/home_module.dart';
 import 'package:barber_shop_app/src/shared/widgets/barber_button_login.dart';
 import 'package:barber_shop_app/src/shared/widgets/barber_colors.dart';
 import 'package:flutter/material.dart';
@@ -106,8 +106,10 @@ class _LoginState extends State<Login> {
                       ),
                       divider: true,
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => HomeModule()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomeModule()));
                       },
                     ),
                     BarberButtonLogin(

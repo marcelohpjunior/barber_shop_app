@@ -1,4 +1,4 @@
-import 'package:barber_shop_app/src/agendamento/agendamento_module.dart';
+import 'package:barber_shop_app/src/app/agendamento/agendamento_module.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
